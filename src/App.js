@@ -1,9 +1,10 @@
 import "./App.css";
+import Body from "./components/Body";
 
 function App() {
   return (
     <div className="App">
-      <header className=" text-gray-600 font-extrabold">Welcome to NetFlix GPT</header>
+    <Body/>
     </div>
   );
 }
