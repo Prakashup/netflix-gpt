@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import appRouter from "../appRouter";
 import Login from "./Login";
 import { RouterProvider } from "react-router-dom";

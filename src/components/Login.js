@@ -39,7 +39,7 @@ const Login = () => {
         pwdRef.current.value
       )
         .then((userCredential) => {
-          const user = userCredential.user;
+          //const user = userCredential.user;
           updateProfile(auth.currentUser, {
             displayName: nameRef.current?.value,
             photoURL: "https://avatars.githubusercontent.com/u/2987117?v=4",
