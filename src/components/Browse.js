@@ -1,12 +1,31 @@
-import Header from "./Header"
+import { useSelector } from "react-redux";
+import useFetchNowPlaying from "../hooks/useFetchNowPlaying";
+import Header from "./Header";
+import VideoBackground from "./VideoBackground";
+import VideoTitle from "./VideoTitle";
 
 const Browse = () => {
-  return (
-    <div className=" bg-slate-800">
-    <Header/>
-      Browse Component
-    </div>
-  )
-}
+  useFetchNowPlaying();
+  const movies = useSelector((store) => store.movies?.nowPlayingMovies);
+  const trailerMovie = movies?.[0];
 
-export default Browse
+  return (
+    <div>
+      <Header />
+      <section className="primary-section relative">
+        <VideoBackground movieId={trailerMovie?.id}></VideoBackground>
+        <VideoTitle
+          title={trailerMovie?.title}
+          description={trailerMovie?.overview}
+          rating={trailerMovie?.vote_average}
+        ></VideoTitle>
+      </section>
+      <section className="secondary-section h-svh">
+        
+      SOME text
+      </section>
+    </div>
+  );
+};
+
+export default Browse;

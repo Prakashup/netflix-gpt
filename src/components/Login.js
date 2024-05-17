@@ -119,7 +119,7 @@ const Login = () => {
             type="password"
             placeholder="Password"
           />
-          <p className="text-red-500 mb-5 text-center">{errMsg}</p>
+          <p className="text-red-500 mb-2 text-center">{errMsg}</p>
           <button
             className="button bg-red-600 font-extralight"
             onClick={handleButtonSubmit}
@@ -131,9 +131,9 @@ const Login = () => {
           className=" text-slate-400 mt-20 cursor-pointer"
           onClick={handleSignUp}
         >
-          {inSignIn
-            ? "Already a User Sign In now."
-            : "New to Netflix? Sign up now."}
+          {!inSignIn
+            ? <span>Already a User?<span className='text-white underline pl-2'>Sign in now.</span></span>
+            : <span>New to Netflix?<span className='text-white underline pl-2'>Sign up now.</span></span>}
         </p>
         <p className="text-slate-400 mt-5">
           This page is protected by Google CAPTCHA to ensure you're not a bot.
