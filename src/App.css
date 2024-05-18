@@ -8,7 +8,7 @@
 .login-page::after {
     position: absolute;
     content: "";
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.4);
     width: 100%;
     height: 100%;
     top: 0;
